@@ -28,6 +28,11 @@ describe 'a visitor' do
       trail_2 = trip_1.trails.create!(length: 10, name: "sfdg", address: "gfad")
 
       visit trip_path(trip_1)
+
+      expect(page).to have_content("Total hiking distance: #{trip_1.total_hiking_distance}")
+      expect(page).to have_content("Average hiking distance: #{trip_1.average_hiking_distance}")
+      expect(page).to have_content("Longest hiking distance: #{trip_1.max_hiking_distance}")
+      expect(page).to have_content("Shortest hiking distance: #{trip_1.min_hiking_distance}")
     end
   end
 end

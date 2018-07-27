@@ -6,3 +6,10 @@
 <li><%= trail.length %></li>
 </ul>
 <% end %>
+
+<ul>
+  <li>Total hiking distance: <%= @trip.total_hiking_distance %></li>
+  <li>Average hiking distance: <%= @trip.average_hiking_distance %></li>
+  <li>Longest hiking distance: <%= @trip.max_hiking_distance %></li>
+  <li>Shortest hiking distance: <%= @trip.min_hiking_distance %></li>
+</ul>

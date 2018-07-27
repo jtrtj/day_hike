@@ -1,0 +1,8 @@
+
+<% @trip.trails.each do |trail| %>
+<p><%= link_to  trail.name, trail_path(trail) %></p>
+<ul>
+<li><%= trail.address %></li>
+<li><%= trail.length %></li>
+</ul>
+<% end %>
